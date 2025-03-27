@@ -19,7 +19,7 @@ let update=0
 const update_counters=async ()=>{
       if (update) return
       update=1
-      const web3 = new Web3('https://rpc.berachain.com')
+      const web3 = new Web3('https://rpc.berachain.com/htpp')
       const contract=new web3.eth.Contract(abi, CONTRACT_ADDR)
 
       const totalSupply = await contract.methods.totalSupply().call()
